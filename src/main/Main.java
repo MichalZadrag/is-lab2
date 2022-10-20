@@ -56,11 +56,11 @@ public class Main {
             Component comp = super.prepareRenderer(renderer, row, column);
 
             if(wasModified.get(row) != null && wasModified.get(row)) {
-                comp.setBackground(Color.LIGHT_GRAY);
-            }else if(colorByRow.get(row) != null) {
-                comp.setBackground(colorByRow.get(row));
-            }else {
                 comp.setBackground(Color.WHITE);
+            }else if(colorByRow.get(row) != null) {
+                comp.setBackground(Color.RED);
+            }else {
+                comp.setBackground(Color.LIGHT_GRAY);
             }
 
             return comp;
